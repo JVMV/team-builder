@@ -1,0 +1,35 @@
+.Form {
+    display: flex;
+    flex-flow: column wrap;
+    background-color:darkred;
+    border: solid 2px red;
+    width: 100vw;
+    height: 50vh;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    border: solid 2px orange;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+label {
+    padding: 1%;
+}
+
+input {
+margin-left: 2%;
+background-color: #deb887bf;
+}
+
+::placeholder {
+    color: black;
+}
+
+select {
+    margin-left: 2%;
+    background-color: #deb887bf;
+}
