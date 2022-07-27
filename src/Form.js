@@ -2,15 +2,21 @@ import React, { useState } from 'react';
 import './Form.css'
 
 export default function Form(props) {
-const {name, email, role} = props;
+const {name, email, role, update, submit} = props;
 
 const onChange = e => {
     console.log(e.target.name, e.target.value);
+    update(e.target.name, e.target.value);
+}
+
+const onSubmit = e => {
+    e.preventDefault();
+    submit();
 }
 
 return (
 <div className='Form'>
-    <form>
+    <form onSubmit={onSubmit}>
         <label>Name
             <input
                 value={name} 
@@ -41,7 +47,7 @@ return (
         </label>
 
         <div className='submit'>
-            <button>submit</button>
+            <button>Submit</button>
         </div>
     </form>
 </div>
